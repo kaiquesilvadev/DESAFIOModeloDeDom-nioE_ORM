@@ -4,6 +4,10 @@
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.5.4-brightgreen.svg)
 ![H2](https://img.shields.io/badge/H2-Database-lightgrey.svg)
 
+Desenvolvi este projeto como parte do desafio do curso DevSuperior, focado em aprimorar meus conhecimentos em ORM. A experiência fortaleceu minha habilidade prática na integração de dados com Hibernate, solidificando conceitos fundamentais de mapeamento objeto-relacional.
+
+## DESAFIO
+
 Você deve criar um projeto no Spring Boot com Java e banco de dados H2, e implementar o modelo conceitual conforme especificação a seguir. Além disso, você deve fazer o seeding da base de dados conforme diagrama de objetos que segue.
 
 ## Diagrama de Classes
