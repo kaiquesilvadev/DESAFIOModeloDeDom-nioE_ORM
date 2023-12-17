@@ -10,13 +10,13 @@ Você deve criar um projeto no Spring Boot com Java e banco de dados H2, e imple
 
 - O diagrama de classes apresenta a estrutura do projeto e as relações entre as diferentes classes e entidades. Ele fornece uma visão visual do design da aplicação e ajuda a entender como as partes do sistema interagem entre si
 
-![Diagrama de Classes]()
+![Diagrama de Classes](https://github.com/kaiquesilvadev/DESAFIO_ModeloDeDominio_ORM/blob/main/Captura%20de%20tela%202023-12-16%20221157.png)
 
 ## Diagrama de Objetos
 
 - O diagrama de objetos é uma representação visual poderosa que nos permite compreender como as instâncias de classes interagem em tempo de execução dentro de nosso sistema. Ele oferece uma visão detalhada das relações entre objetos e suas características durante a execução do programa.
 
-![Diagrama de Objetos](https://github.com/kaiquesilvadev/lojaDeVendas-spring_boot/blob/main/Captura%20de%20tela%202023-09-28%20210357.png)
+![Diagrama de Objetos](https://github.com/kaiquesilvadev/DESAFIO_ModeloDeDominio_ORM/blob/main/Captura%20de%20tela%202023-12-16%20221221.png)
 
 ## Começando
 
