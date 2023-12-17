@@ -32,7 +32,7 @@ Siga as instruções abaixo para configurar e executar o projeto em sua máquina
 1. Clone este repositório para o seu ambiente de desenvolvimento local:
 
 ```bash
-git clone [https://github.com/kaiquesilvadev/workshop-spring-boot-mongodb](https://github.com/kaiquesilvadev/DESAFIO_ModeloDeDominio_ORM.git
+git clone https://github.com/kaiquesilvadev/DESAFIO_ModeloDeDominio_ORM.git
 
 ````
 
