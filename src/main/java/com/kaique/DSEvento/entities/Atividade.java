@@ -1,34 +1,50 @@
 package com.kaique.DSEvento.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_atividade")
-public class Atividade implements Serializable{
+public class Atividade implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String descricao;
-	private Double prece;
-	
+	private Double preco;
+
+	@ManyToOne
+	@JoinColumn(name = "categori_id", nullable = true)
+	private Categoria categori;
+
+	@ManyToMany(mappedBy = "atividades")
+	private List<Participante> participantes = new ArrayList<>();
+
+	@OneToMany(mappedBy = "atividade")
+	private List<Bloco> blocos = new ArrayList<>();
+
 	public Atividade() {
 	}
-	
-	public Atividade(Long id, String nome, String descricao, Double prece) {
+
+	public Atividade(Long id, String nome, String descricao, Double preco) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
-		this.prece = prece;
+		this.preco = preco;
 	}
 
 	public Long getId() {
@@ -55,12 +71,28 @@ public class Atividade implements Serializable{
 		this.descricao = descricao;
 	}
 
-	public Double getPrece() {
-		return prece;
+	public Double getPreco() {
+		return preco;
 	}
 
-	public void setPrece(Double prece) {
-		this.prece = prece;
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+
+	public Categoria getCategori() {
+		return categori;
+	}
+
+	public void setCategori(Categoria categori) {
+		this.categori = categori;
+	}
+
+	public List<Participante> getParticipantes() {
+		return participantes;
+	}
+
+	public List<Bloco> getBlocos() {
+		return blocos;
 	}
 
 	@Override

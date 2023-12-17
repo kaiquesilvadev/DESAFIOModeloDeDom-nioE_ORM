@@ -1,24 +1,33 @@
 package com.kaique.DSEvento.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_participante")
-public class Participante implements Serializable{
+public class Participante implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String email;
+
+	@ManyToMany
+	@JoinTable(name = "tb_participante_atividades", joinColumns = @JoinColumn(name = "participante_id"), inverseJoinColumns = @JoinColumn(name = "atividade_id", nullable = true))
+	private List<Atividade> atividades = new ArrayList<>();
 
 	public Participante() {
 	}
@@ -47,6 +56,10 @@ public class Participante implements Serializable{
 
 	public String getEmail() {
 		return email;
+	}
+
+	public List<Atividade> getAtividades() {
+		return atividades;
 	}
 
 	public void setEmail(String email) {
